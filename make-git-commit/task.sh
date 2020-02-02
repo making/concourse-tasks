@@ -1,3 +1,4 @@
+#!/bin/bash
 set -eu
 
 # https://docs.pivotal.io/platform-automation/v4.3/tasks.html#make-git-commit
