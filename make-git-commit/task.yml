@@ -1,20 +1,25 @@
 # https://docs.pivotal.io/platform-automation/v4.3/tasks.html#make-git-commit
 platform: linux
+image_resource:
+  type: docker-image
+  source:
+    repository: alpine/git
+    tag: latest
 
 inputs:
-  - name: tasks
-  - name: repository
-  # - This must be an initialized git repository.
-  # - Note that any changes present in this input
-  #   will be committed along with the file copied in
-  #   by this task.
-  - name: file-source
-  # - This is the input folder containing the file to be committed.
-  #   Typically, this will from some other task
-  #   with an output that needs to be persisted.
+- name: tasks
+- name: repository
+# - This must be an initialized git repository.
+# - Note that any changes present in this input
+#   will be committed along with the file copied in
+#   by this task.
+- name: file-source
+# - This is the input folder containing the file to be committed.
+#   Typically, this will from some other task
+#   with an output that needs to be persisted.
 
 outputs:
-  - name: repository-commit
+- name: repository-commit
 
 params:
   FILE_SOURCE_PATH:
