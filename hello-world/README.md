@@ -1,6 +1,6 @@
 ## Usage
 
-```
+```yml
 resources:
 - name: tasks
   type: git
