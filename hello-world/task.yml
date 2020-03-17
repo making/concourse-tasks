@@ -9,4 +9,4 @@ run:
   args: 
   - -c
   - |
-    echo "Hello, Concourse!"
+    echo "Hello, World!"
