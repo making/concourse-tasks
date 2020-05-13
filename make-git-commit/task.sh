@@ -14,7 +14,7 @@ if [ ! -d "$destination_directory" ]; then
   mkdir -p "$destination_directory";
 fi;
 
-cp file-source/"$FILE_SOURCE_PATH" \
+cp -R file-source/$FILE_SOURCE_PATH \
    "$FILE_DESTINATION_PATH"
 cd repository-commit
 git config user.name "$GIT_AUTHOR_NAME"
